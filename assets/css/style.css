@@ -1,0 +1,127 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  font-family: "Courier New", Courier, monospace;
+  scroll-behavior: smooth;
+  scroll-padding-top: 85px;
+}
+body {
+  background-color: aliceblue;
+}
+.aboutSection{
+    background-color: aliceblue;
+    height: 200px;
+}
+.counterContainer
+ {
+  background-color: red;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+.counter {
+  width: 300px;
+  max-width: 100%;
+  font-weight: bold;
+  font-size: max(6vw, 4rem);
+  background-color: rgb(124, 194, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+}
+footer,
+.home {
+  height: 150vh;
+  display: flex;
+  gap: 0;
+}
+.home {
+  background: crimson
+}
+footer{
+    background-color: royalblue;
+}
+
+
+.navBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: sticky;
+  top: 0;
+}
+nav {
+  box-sizing: border-box;
+  background-color: black;
+  border-radius: 0.5rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  position: relative;
+  isolation: isolate;
+  width: max(40vw, 400px);
+  overflow: hidden;
+  gap: 1rem;
+  padding: 1rem;
+  overflow-x: auto;
+}
+.indicator {
+  position: absolute;
+  top: 0;
+  left: 0%;
+  width: 0px;
+  height: 8px;
+  background-color: rgb(255, 255, 255);
+  transition: 200ms ease;
+  isolation: isolate;
+  z-index: -1;
+}
+.indicator::before,
+.indicator::after {
+    content: "";
+    position: absolute;
+    height: 60px;
+    top: 100%;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.486) 5%, rgba(255, 255, 255, 0.286));
+    filter: blur(8px);
+    z-index: -1;
+    transform: skew(15deg, 0deg) translateX(10px);
+    transform-origin: bottom left;
+    transition: 200ms ease;
+}
+
+.indicator::after {
+    right: 0;
+    transform: skew(-15deg, 0deg) translateX(-10px);
+    transform-origin: bottom right;
+}
+
+nav a {
+  color: inherit;
+  list-style: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+  /* width: calc(100% / 4); */
+  text-align: center;
+  padding: 1rem 0.8rem;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-content: center;
+  border: 1px solid white;
+}
